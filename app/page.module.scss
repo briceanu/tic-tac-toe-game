@@ -1,0 +1,8 @@
+@use './styles/mixins.scss' as *;
+
+.page {
+  @include center;
+  min-width: 100vw;
+  min-height: 100dvh;
+  background-color: rgb(80, 65, 65);
+}

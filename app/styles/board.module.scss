@@ -1,0 +1,31 @@
+@use './mixins.scss' as *;
+.board {
+  @include center;
+  flex-direction: column;
+  width: 500px;
+  height: 500px;
+  background-color: grey;
+  border: 1px solid black;
+  margin: clamp(1rem, 2%, 0.5rem);
+}
+.grid {
+  display: grid;
+  gap: 1px;
+  grid-template-columns: repeat(3, 1fr);
+}
+.paragraph {
+  font-size: clamp(2rem, 1vw, 3rem);
+  margin: clamp(0.5rem, 1vw, 0.89rem) 0;
+}
+.reset {
+  margin-top: 2rem;
+  padding: 0.5rem 1rem;
+  font-size: clamp(2rem, 3vw, 1rem);
+  background-color: aqua;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.winner_message {
+  font-size: clamp(2.4rem, 3vw + 5%, 2rem);
+}
