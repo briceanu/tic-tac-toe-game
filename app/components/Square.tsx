@@ -12,7 +12,6 @@ const Square = ({
   onClick: () => void;
 }) => {
   if (!value) {
-    console.log(value);
     return (
       <button
         className={styles.square}
@@ -22,11 +21,9 @@ const Square = ({
     );
   }
 
+  const className = value === 'X' ? styles.square_x : styles.square_o;
   return (
-    <button
-      className={`${styles.square} square_${value.toLocaleLowerCase()}`}
-      disabled
-    >
+    <button className={`${styles.square} ${className}`} disabled>
       {value}
     </button>
   );

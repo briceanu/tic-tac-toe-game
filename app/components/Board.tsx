@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+
 import styles from '../styles/board.module.scss';
 import Square from './Square';
 type Player = 'X' | 'O' | null | 'BOTH';
@@ -70,7 +71,7 @@ const Board = () => {
         <p className={styles.paragraph}>Hey {currentPlayer}, it is your turn</p>
       )}
       {winner && winner !== 'BOTH' && (
-        <p className={styles.winner_message}>Congratulation {winner}</p>
+        <p className={styles.winner_message}>Congratulations {winner}</p>
       )}
       {winner && winner === 'BOTH' && (
         <p>Congratulation your are both winners</p>
